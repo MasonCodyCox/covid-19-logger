@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h4 class="center-align">Sign Up Here!</h4>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up')}}">
+        <div class="card-panel">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Example: John123" id="username" name="username" type="text" class="validate">
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" name="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row center-align">
+                <button class="btn waves-effect text-shadow purple darken-1" type="submit">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

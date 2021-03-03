@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>Task Manager</title>
+    <title>Covid 19 Tracker</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <header>
         <nav class="nav-extended text-shadow purple darken-1">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_documents') }}" class="brand-logo">Covid Logger</a>
+                <a href="{{ url_for('get_documents') }}" class="brand-logo">Covid Tracker</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i
                         class="material-icons">apps</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -31,7 +31,7 @@
                     <li><a href="#">Manage Documents</a></li>
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,7 +43,7 @@
             <li><a href="#">Manage Documents</a></li>
             <li><a href="#">Log In</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
         </ul>
     </header>
 
