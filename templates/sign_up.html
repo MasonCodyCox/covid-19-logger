@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center-align">Sign Up Here!</h4>
+<h4 class="center-align sign-up-title">Sign Up Here!</h4>
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up')}}">
         <div class="card-panel">
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Example: John123" id="username" name="username" type="text" class="validate">
+                    <input placeholder="Example: John123" id="username" name="username" type="text" minlength="7"
+                        maxlength="18" pattern="^[a-zA-Z0-9]{7,18}$" class="validate" required>
                     <label for="username">Username</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" name="password" type="password" class="validate">
+                    <input id="password" name="password" type="password" minlength="7" maxlength="18"
+                        pattern="^[a-zA-Z0-9]{7,18}$" class="validate" required>
                     <label for="password">Password</label>
                 </div>
             </div>
