@@ -26,39 +26,45 @@
                         class="material-icons">apps</i></a>
                 <ul class="right hide-on-med-and-down navbar-links">
                     <li><a href="{{ url_for('get_documents') }}">Home</a></li>
-                    <li><a href="#">Profile</a></li>
+                    {% if session.user %}
+                    <li><a href="{{ url_for('my_profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="#">New Document</a></li>
                     <li><a href="#">Manage Documents</a></li>
-                    <li><a href="#">Log In</a></li>
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav navbar-links" id="mobile-demo">
             <li><a href="{{ url_for('get_documents') }}">Home</a></li>
-            <li><a href="#">Profile</a></li>
+            {% if session.user %} 
+            <li><a href="{{ url_for('my_profile', username=session['user']) }}">Profile</a></li>
             <li><a href="#">New Document</a></li>
             <li><a href="#">Manage Documents</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('sign_up') }}">Sign Up</a></li>
+            {% endif %}
         </ul>
     </header>
 
     <section>
         <!--Flash messages displayed to the user-->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="blue-grey lighten-5 center-align col s12 m6 offset-m3">
-                            {{ message }}
-                        </h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="blue-grey lighten-5 center-align col s12 m6 offset-m3">
+                {{ message }}
+            </h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 

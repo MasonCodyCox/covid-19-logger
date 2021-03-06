@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center-align sign-up-title">Sign Up Here!</h4>
+<h4 class="center-align sign-up-title">Log In Here!</h4>
 
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('sign_up')}}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login')}}">
         <div class="card-panel">
             <div class="row">
                 <div class="input-field col s12">
@@ -32,8 +32,8 @@
 <div class="row">
     <div class="col s12">
         <h5 class="center-align cta-page-links">
-            Already have an account with us? Click here to log in.
-            <a href="{{ url_for('login')}}"><span>Log In</span></a>
+            Click here to create an account!
+            <a href="{{ url_for('sign_up')}}"><span>Sign Up</span></a>
         </h5>
     </div>
 </div>

@@ -5,6 +5,10 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+.cta-page-links {
+    font-family: 'Titillium Web', sans-serif;
+}
+
 .flashes {
     margin-top: 12px;
 }
@@ -12,5 +16,3 @@
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-/**
-font-family: 'Titillium Web', sans-serif;**/
