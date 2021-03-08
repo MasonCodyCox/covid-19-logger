@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_documents")
 def get_documents():
-    documents = mongo.db.documents.find()
+    documents = list(mongo.db.documents.find())
     return render_template("documents.html", documents=documents)
 
 
@@ -90,6 +90,12 @@ def logout():
     flash("User logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/create_document")
+def create_document():
+    return render_template("create_document.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
