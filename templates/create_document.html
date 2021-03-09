@@ -1,13 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 
- <h4 class="center-align">Create New Document</h4>
+<h4 class="center-align">Create New Document</h4>
 
- <div class="row">
-    <div class="input-field col s8">
-      <input value="Alvin" id="first_name2" type="text" class="validate">
-      <label class="active" for="first_name2">First Name</label>
-    </div>
-  </div>
+<div class="row">
+    <form class="col s12" method="POST" action="">
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <input name="symptom_type" id="symptom_type" type="text" minlength="3" maxlength="40" class="validate"
+                    required>
+                <label class="active" for="symptom_type">Symptom Type</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <i class="material-icons prefix">assignment</i>
+                <textarea id="symptom_description" name="symptom_description" class="materialize-textarea validate" minlength="4" maxlength="300"
+                    required></textarea>
+                <label for="symptom_description">Symptom Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <i class="material-icons prefix">assignment</i>
+                <input id="started_experiencing" name="started_experiencing" class="datepicker validate"
+                required>
+                <label for="started_experiencing">Started Experiencing</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s8 offset-s2">
+                <div class="switch">
+                    <label for="self_isolating">
+                        <input type="checkbox" id="self_isolating" name="self_isolating">
+                        <span class="lever"></span>
+                        <strong>Self Isolating</strong>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}
