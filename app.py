@@ -92,8 +92,23 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/create_document")
+@app.route("/create_document", methods=["GET", "POST"])
 def create_document():
+    if request.method == "POST":
+        self_isolating = "on" if request.form.get("self_isolating") else "off"
+        document = {
+            "symptom_type": request.form.get("symptom_type"),
+            "symptom_description": request.form.get(
+                "symptom_description"),
+            "started_experiencing": request.form.get(
+                "started_experiencing"),
+            "self_isolating": self_isolating,
+            "created_by": session["user"]
+        }
+        mongo.db.documents.insert_one(document)
+        flash("Document Added")
+        return redirect(url_for("get_documents"))
+    
     return render_template("create_document.html")
 
 

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center-align">Create New Document</h4>
+<h4 class="center-align new-documents-title">Create New Document</h4>
 
-<div class="row">
-    <form class="col s12" method="POST" action="">
+<div class="row card-panel blue-grey lighten-5">
+    <form class="col col s8 offset-s2" method="POST" action="{{ url_for('create_document') }}">
         <div class="row">
             <div class="input-field col s8 offset-s2">
                 <input name="symptom_type" id="symptom_type" type="text" minlength="3" maxlength="40" class="validate"
@@ -15,16 +15,15 @@
         <div class="row">
             <div class="input-field col s8 offset-s2">
                 <i class="material-icons prefix">assignment</i>
-                <textarea id="symptom_description" name="symptom_description" class="materialize-textarea validate" minlength="4" maxlength="300"
-                    required></textarea>
+                <textarea id="symptom_description" name="symptom_description" class="materialize-textarea validate"
+                    minlength="4" maxlength="300" required></textarea>
                 <label for="symptom_description">Symptom Description</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s8 offset-s2">
                 <i class="material-icons prefix">assignment</i>
-                <input id="started_experiencing" name="started_experiencing" class="datepicker validate"
-                required>
+                <input id="started_experiencing" name="started_experiencing" class="datepicker validate" required>
                 <label for="started_experiencing">Started Experiencing</label>
             </div>
         </div>
@@ -37,6 +36,14 @@
                         <strong>Self Isolating</strong>
                     </label>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect text-shadow purple darken-1" 
+                type="submit">Create Document
+                    <i class="material-icons right">add_circle_outline</i>
+                </button>
             </div>
         </div>
     </form>
