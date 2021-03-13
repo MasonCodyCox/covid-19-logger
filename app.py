@@ -112,6 +112,34 @@ def create_document():
     return render_template("create_document.html")
 
 
+@app.route("/edit_document/<document_id>", methods=["GET", "POST"])
+def edit_document(document_id):
+    if request.method == "POST":
+        self_isolating = "on" if request.form.get("self_isolating") else "off"
+        update = {
+            "symptom_type": request.form.get("symptom_type"),
+            "symptom_description": request.form.get(
+                "symptom_description"),
+            "started_experiencing": request.form.get(
+                "started_experiencing"),
+            "self_isolating": self_isolating,
+            "created_by": session["user"]
+        }
+        mongo.db.documents.update({"_id": ObjectId(document_id)}, update)
+        flash("Document Updated")
+        return redirect(url_for("get_documents"))
+
+    document = mongo.db.documents.find_one({"_id": ObjectId(document_id)})
+    return render_template("edit_document.html", document=document)
+
+
+@app.route("/remove_document/<document_id>")
+def remove_document(document_id):
+    mongo.db.documents.remove({"_id": ObjectId(document_id)})
+    flash("Document Removed")
+    return redirect(url_for("get_documents"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
