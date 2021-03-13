@@ -1,20 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center-align documents-title">All Documents</h4>
+<h3 class="center-align title-font">About us</h3>
+
+<div class="row">
+    <div class="col s12 m10 offset-m1">
+        <div class="card-panel blue-grey lighten-5">
+            <span class="page-small-text">Here at Covid-19 Tracker, we (the creators) aim to deliver a site in
+                which anyone can safetly log covid experiences.
+                By storing your experinces with covid here,
+                if you ever run into any health problems in the future, you can refer
+                back to your covid document to spot any correlation.
+            </span>
+        </div>
+    </div>
+</div>
+
+<h4 class="center-align title-font">All Documents</h4>
 
 <ul class="collapsible popout">
     {% for document in documents %}
     <li>
         <div class="collapsible-header">
             {% if session.user|lower == document.created_by|lower %}
-            <a href="{{ url_for('edit_document', document_id=document._id) }}" class="btn waves-effect text-shadow purple darken-1">Edit</a>
-            <a href="{{ url_for('remove_document', document_id=document._id) }}" class="btn waves-effect text-shadow purple darken-1">Delete</a>
+            <a href="{{ url_for('edit_document', document_id=document._id) }}"
+                class="btn waves-effect text-shadow purple darken-1 page-small-text">Edit</a>
+            <a href="{{ url_for('remove_document', document_id=document._id) }}"
+                class="btn waves-effect text-shadow purple darken-1 page-small-text">Delete</a>
             {% endif %}
             <i class="material-icons">expand_more</i>
-            <h5>{{ document.symptom_type }} : {{ document.started_experiencing }}</h5>
+            <h5 class="page-small-text">{{ document.symptom_type }} : {{ document.started_experiencing }}</h5>
         </div>
-        <div class="collapsible-body">
+        <div class="collapsible-body page-small-text">
             <p>{{ document.symptom_description }}</p>
             {% if document.self_isolating == "on" %}
             self isolating: <i class="material-icons">check_box</i>

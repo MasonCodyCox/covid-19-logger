@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
-.navbar-title, .documents-title, .navbar-links, .sign-up-title, .new-documents-title, .flashes{
+.flashes, .title-font{
     font-family: 'PT Sans', sans-serif;
 }
 
-.cta-page-links {
+.cta-page-links, .page-small-text {
     font-family: 'Titillium Web', sans-serif;
+}
+
+.profile-card{
+    margin-top: 21px;
 }
 
 .flashes {
