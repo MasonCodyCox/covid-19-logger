@@ -107,7 +107,7 @@ def create_document():
         }
         mongo.db.documents.insert_one(document)
         flash("Document Added")
-        return redirect(url_for("get_documents"))
+        return redirect(url_for("get_categories"))
     
     return render_template("create_document.html")
 
@@ -127,7 +127,7 @@ def edit_document(document_id):
         }
         mongo.db.documents.update({"_id": ObjectId(document_id)}, update)
         flash("Document Updated")
-        return redirect(url_for("get_documents"))
+        return redirect(url_for("get_categories"))
 
     document = mongo.db.documents.find_one({"_id": ObjectId(document_id)})
     return render_template("edit_document.html", document=document)
@@ -137,7 +137,13 @@ def edit_document(document_id):
 def remove_document(document_id):
     mongo.db.documents.remove({"_id": ObjectId(document_id)})
     flash("Document Removed")
-    return redirect(url_for("get_documents"))
+    return redirect(url_for("get_categories"))
+
+
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.documents.find().sort("symptom_type", 1))
+    return render_template("categories.html", categories=categories)
 
 
 if __name__ == "__main__":
