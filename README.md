@@ -1,102 +1,107 @@
-# Tiles Memory Game
+# Covid-19 Tracker
 
-Welcome to my simple memory game created using HTML5, CSS and Javascript! This is a 
-short yet effective way at putting your brain to the test. Within the game, there are 
-different difficulties to choose from. This allows players to enjoy the game at an 
-intensity level that suits their own gaming style.
+Welcome to my Covid-19 tracker created using HTML5, CSS, Javascript, Python and MongoDB. This 
+a simple yet effective database used to store covid-19 experiences.
 
-I want players to have a hassle free experience on my site when dealing with playing, 
-navigating or sending support emails. Creating a full list of instructions, call to 
-action buttons and a simple yet effective form with Javascript has made this all possible.
+I want users to be able to log any details/ experiences with covid-19. This will be benificial 
+to the user if they were to run into any health issues and needed to reflect on what may have 
+caused it. A safe, easy way to store your data online.
 
 ## Design Process 
 
-When i initally thought about creating a memory game, I sketched some ideas down on paper. 
-My original design was going to be 3 pages consisting of a home page (with the game on it), 
-how to play page and a support page. After using the Javascript language and really 
-getting a feel for how it bonds to a web page, I was able to impliment 2 more pages along 
-with multiple difficulty levels. My inital idea only included one difficulty level. But, 
-once i got started with things I realised that users may prefer selectable intesity levels.
+When i initally thought about creating my Covid-19 Tracker, I sketched some ideas down onto my IPad. 
+My original design was going to be 5 pages. I then learned how to impliment the functionality where 
+would only be visable to users who wre logged in/ out. From learning this, I relaised i could expand 
+my site further making sections of it only accessable to some such as edit pages and manage documents.
+
+## Wireframes/ Mock ups
+
+- These are all found within the assets folder. Please go to assets > wireframes.
 
 ## User Experience
 
 ### User Stories
 
-* I want to put my memory to the test.
-* I want to be able to select different intensity levels.
-* I want to be able to contact someone for support if needed.
+* I want to be able to store information.
+* I want to be able to read different peoples documents if permitted to.
+* I want to be able to update my information or delete it if needed.
+* I dont want other people to be able to update or delete my entries.
 * I want an easy navigation layout for the website.
 
 These needs are met by;
 
-* A simple yet effective memory game which will notify you upon completion.
-* 3 different intensity levels allows the user the play at a rate they desire.
-* A fully functional form on the support page.
-* A simple yet effective navigation bar that will not break from clicking between pages in any order.
+* A simple yet effective styled form for creating documents.
+* A straight forward documents section where documents are easily accessable.
+* An edit page which allows users to access their previous entires for updating.
+* A simple yet effective navigation bar that will not break from clicking between pages in any 
+order. And, adapts to screen size.
 
 ### Strategy Plane 
 
 ##### Website Goals;
 
-* Supply a user with a fun, interactive memory game.
+* A safe way to store documents.
 * Create an easy to use website.
 * Use simple yet effective ways to impliment javascript for interactivity.
 * Create a website that would be effective in all age groups.
+* Easy CRUD functionality.
 
 ### Scope Plane 
 
-This website is designed over 5 pages. The home page contains 
-call the action buttons for other pages will lure users too eplore 
-the site with ease. The game pages access the DOM to change 
-the layoud of the html when the user interacts with it. The support page 
-uses EmailJS api to send a personal email with any data the user inputs in the fields.
-The EmailJS templte is also fully customised for ease of use by the receiver.
+This website is designed over 7 pages. The home page contains 
+a clear about message which informs users of websites purpose 
+and documents for users to read. The website uses a database to 
+store information. overall, the entire site enables CRUD functionality.
+The Navbar is has JQuery implemented for ease of access from different screen sizes.
 
 
 ### Structure Plane 
 
 The aim of the structure is to allow users to navigate through the site with ease. 
-The home page contains a description on what the site is about, how to play and how to 
-get support if needed. Game pages have tiles that are outlined so that they are easy to see for the user.
-The support page is structured so that the user can fill in their details easily with placeholder text to enusre they knwo where data goes.
+The home page contains a description on what the site is about, documents for the user to read.
+The create a document page provides an easy to use form for the user including a calender 
+format to pick a date from.
 
 ### Skeleton Plane 
 
-1. 5 different pages with easy access to all.
-2. Tiles that change based on screen size for ease of use.
-3. A burger navagtion icon for smaller screens.
+1. 7 different pages with easy access to all.
+2. Document structure that changed based on device being used.
+3. A dropdown navagtion icon for smaller screens.
 
 ### Surface Plane
 
 When creating this project, I thought intensly about colours that would be good for user experience.
-The colours for the main site are subtle coulours that go well together. The tiles 
-had to be made with vibrant colours because the user will be playing a game in which they stimulate their mind. I want the user to feel as if they are on their feet while playing.
+The colours for the main site are subtle coulours that go well together along with a bold primary colour. The 
+input field cards were a subtle grey which is easy on the eys for every user. I want the user to feel as if they 
+feel welcomed to the site.
 
 ## Features
 
-Burger icon - Easy navagtion for smaller devices where all pages may not fit onto the screen.
+dropdown icon - Easy navagtion for smaller devices where all pages may not fit onto the screen.
 
 Call to action buttons - easy navigation for user from and to any page on the website.
 
-Support from - a simple from which will allow any user to receive support upon completion.
+Create a document form - a simple form which will allow any user to make an entry to the database
 
-An alert box - a alert box which informs the user of completion and temps them with the next level.
+A flash message - a flash message which informs the user of completion, error encounters when submitting a form.
 
 links to socials - easy to use icons at the bottom of every page for additional navagation/ support.
 
 ### Features left to implement
 
-* A function which randomises the tile layout after completion.
+*links to socials - easy to use icons at the bottom of every page for additional navagation/ support.
 
-* I would have liked to of chnaged the layoud of tiles for smaller devices.
+*Support page - a page in which the user can receive help/ report upon a form completion.
 
-* I had an issue with the burger icon not working just before completion which has not been resolved yet.
+* A function which allows users to view only personal entries via profile page.
+
+* I would have liked to of changed the layout of manage document cards for smaller devices.
 
 ## Technologies used
 
-[Bootstrap](https://getbootstrap.com/) - This is the framework I used to construct the website.
+[Materializecss](https://materializecss.com/) - This is the framework I used to construct the website.
 
-[Stack Overflow](https://stackoverflow.com/) - I used this as a resource of skils that I needed to learn e.g javascrip.
+[Stack Overflow](https://stackoverflow.com/) - I used this as a resource of skils that I needed to learn e.g jQuery, Python.
 
 [W3Schools](https://www.w3schools.com/default.asp) - I used this as a resource for skills e.g Styling pieces of text.
 
@@ -104,45 +109,45 @@ links to socials - easy to use icons at the bottom of every page for additional 
 
 [Geeks for geeks](https://www.geeksforgeeks.org/) - I used this to learn different attributes for HTML.
 
-[Site point community](https://www.sitepoint.com/community/) - I used this to learn how to style bootstraps grid system.
+[MongoDB](https://www.mongodb.com/3) - This was used to create my database.
 
-[Font awesome](https://fontawesome.com/v4.7.0/) - This was used to add icons into the footer for socials
+[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - This website was used to impliment password hashing.
 
-[Google fonts](https://fonts.google.com/) - This website was used to add personality to my website
-
-[EmailJS](https://www.emailjs.com/) - This was used for the api so that my form would work
+[Heroku](https://www.heroku.com/) - This was used to deploy my app.
 
 ## Testing
 
-- Nav-bar - I have tested the nav bar on every page to make sure the links to the other pages work, no matter what order they are clicked in.
-- Footer - Social links work in the footer on all pages.
-- Tested all external links in footer to ensure they open a new tab for user experience purposes.
-- Tested that all buttons work.
-- Tested all buttons to ensure they work no matter what order they are pressed in.
+-  The CSS was run through the https://jigsaw.w3.org/css-validator/ without any errors found.
+-  The HTML was run through the https://validator.w3.org/, the errors that are found are all related to the Jinja 
+templating.
+-  The cornflakes(flake8) lint was installed as an extension to the development and validated the Python code 
+throughout my milestone project.
+-  The site was tested on three different browsers: Google Chrome, Brave and Safari.
+-  The responsiveness was tested on a wide variety of devices such as iphones, tablets and desktops using the Chrome 
+DevTools and http://whatismyscreenresolution.net/multi-screen-test.
+
 
 ## Issues 
 
-- The burger icon for smaller devices stopped working right at the end of my project which I did not manage to fix in time.
+- The manage documents cards didnt sit properly when a large description was added
+- I had issues trying to get my started experiencing placeholder text to dissapear
+- i had tried to set up soem defensive programming with removing a document but i could not get it to 
+work unfortunately.
 
 ### Validation
 
-The W3C Markup Validator and the W3C CSS Validator were both used to validate every page of this project to ensure there were no syntax errors.
-
-- Home - Pass
-- Easy level - Pass
-- Medium level -  Pass
-- Hard level - Pass
-- Support - Pass
-- CSS - Pass
+The W3C Markup Validator and the W3C CSS Validator were both used to validate every page of this project.
+Despite my efforts, the vaildation had issues reading Python code. all HTML5 and CSS passed seperatly.
 
 
 ### Device testing
 
-During my project, I consistently checked the websited compatibility with all device sizes to ensure the best user experience possible.
+During my project, I consistently checked the website compatibility with all device sizes to ensure the best user experience possible.
 I ensured this by using Chromes built in developer tools.
-This website works well on all device sizes although I did encounter some issues on mobile device size with the text overflow.
+This website works well on all device sizes although I did encounter some issues on mobile device size with the text overflow. 
+This happens when you go the the create a document page on mobiles and placeholders do not sit on their inputs.
 
-I had a number of work collegues/ friends trial the website out for feedback so that i could make improvments from early development stages
+I had a number of work collegues, family and friends try the website out for feedback so that i could make improvments from early development stages
  regarding a users experience. 
 
 
@@ -161,55 +166,79 @@ I had a number of work collegues/ friends trial the website out for feedback so 
 - Surface Duo
 - Galaxy Fold
 
-### Contact form
+### create document
 
-1. Go to support page
+1. Go to create document page once logged in
 2. Try to submit empty form, a message will appear saying _Field required_
+3. if the field does not meet the required amount of characters, the field will ask 
+that you input the neccessary requirements.
+4. Clicking submit creates a new document which can be viewed on manage documents page with 
+full CRUD functionality to creator.
 
-### Social Footer Links 
+### edit document
 
-1. Click on icon to social platform
-2. Page will open on a seperate tab to ensure the site is not lost
+1. the edit button can only be seen by the creator of the document.
+2. if the creator presses edit, the edit page forms with the input fields 
+of selected document.
+3. once submitted, the user can instantly see the updated document.
+4. select the cancel button instead. user will be taken back to manage documents page.
 
-### Game Pages
+### remove document
+
+1. the creator of the document must be signed in to view this option.
+2. selecting remove will remove the document from the database.
 
 1. Game onto game page and click the tiles faster than 225ms.
 2. Tiles do not crash and game does not stop working.
 
+### Navbar
+
+1. on a smaller device, click the navbar links in any order and they will not break.
+2. certain links are hidden from signed in/ out users for user experience.
+3. go onto a larger device to make sure drop down disapears and a good UI navbar appears.
+
 ## Deployment
 
-[Tiles memory game](https://masoncodycox.github.io/Memory-Game/)
+[Covid-19 Tracker](https://covid-19-logger.herokuapp.com/)
 
-This project of mine is deployed via GitHub pages through my repository. There is no difference between the deployed version and the deployment version.
+This project of mine is deployed via Heroku through their website. There is no difference between the deployed version and the deployment version.
 
 ### Deploying a Github Repository page
 
-- Firstly, in your Repository, select the Repository you wish to deploy.
-- Located in the top horizonatal bar above the Repository, click the Settings link.
-- Inside the Settings page, scroll down until you find the Github Pages Section.
-- Under the Source Section, Click the Tab with *None* Selected and set it to Master then click save.
-- Lastly, once the page has refreshed, scroll back down to the Github Pages Secton and your site URL will be located there.
+####Remote Deployment
+-   Go to your Github repository and open it using GitPod
+-	In the terminal run the command "pip3 freeze --local > requirements.txt" to create a .txt file with all of the dependencies for Heroku
+-	In the terminal run the command "echo web: python run.py > Procfile" to create a Procfile for Heroku
+-	Log in to Heroku and select Create New App
+-	Select the input field App Name
+-	Give your app a name
+-	Select the region closest to your location (ireland for me) as I am in England
+-	Click Create App
+-	To connect the app to your Github repository, click on the Github icon inside of the "deployment method" section
+-	Here there will be a new section called "Connect to Github" - ensure your Github profile is displayed inside it
+-	Insert your repository name inside the "Connect to Github" section next to where your profile is displayed
+-	Click on the "Search" button, once it finds your repository click the "Connect" button
+-	Click on the settings tab at the top of the page, and select "Reveal Config Var"
+-	Add the variables for IP, PORT, SECRET_KEY, MONGO_URI and MONGODB_NAME
+-	Return to the Gitpod and make sure you have pushed the requirements.txt and Procfile
+-	Return to Heroku and select enable automatic deployment
+-	Select your master branch under Branch Selected
+-	Click on the "Deploy Branch" - wait for the app to build
+-	Once the site is deployed, click view to launch the app
+-	As "enable automatic deployment" has been selected, any pushes to github will be updated automatically by heroku.
 
-### Making a Local Clone
-
-- Locate the Github Repository.
-- Click the Code button.
-- copy the link that is presented to you.
-- In Gitpod, change the directory to the location you would like the cloned directory to be located.
-- Type *git clone* in the terminal and paste the link you copied previously.
-- Press enter to create your local clone.
 
 ## Credits
 
 #### Content -
 
-The Navbar and footer have all been copied from bootstrap 4. I have now styled the in my own way to fit into my website.
-The contact page form has been copied from one of my previous projects but styled to fit correctly with this website 
-along with added javascript for functonality.
+The Navbar have all been copied from Matrialize. I have now styled the in my own way to fit into my website.
+The create document form has been copied from one of my previous peices of work but styled to fit correctly with this website 
+along with added Python for functonality.
 
-[Bootstrap](https://getbootstrap.com/) - This is the framework I used to construct the website. the navbar and footer is constructed using this but fully styled by myself.
+[Materializecss](https://materializecss.com/) - This is the framework I used to construct the website.
 
-[Stack Overflow](https://stackoverflow.com/) - I used this as a resource of skils that I needed to learn e.g styling images.
+[Stack Overflow](https://stackoverflow.com/) - I used this as a resource of skils that I needed to learn e.g jQuery, Python.
 
 [W3Schools](https://www.w3schools.com/default.asp) - I used this as a resource for skills e.g Styling pieces of text.
 
@@ -217,19 +246,15 @@ along with added javascript for functonality.
 
 [Geeks for geeks](https://www.geeksforgeeks.org/) - I used this to learn different attributes for HTML.
 
-[Site point community](https://www.sitepoint.com/community/) - I used this to learn how to style bootstraps grid system.
+[MongoDB](https://www.mongodb.com/3) - This was used to create my database.
 
-[CSS.Hover](https://ianlunn.github.io/Hover/) - I used this to design my contact page button.
+[Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/) - This website was used to impliment password hashing.
 
-[Font awesome](https://fontawesome.com/v4.7.0/) - This was used to add icons into the footer for socials
-
-[Google fonts](https://fonts.google.com/) - This website was used to add personality to my website
-
-[EmailJS](emailjs.com) - This is what i used to get my support form working
+[Heroku](https://www.heroku.com/) - This was used to deploy my app.
 
 #### Media
 
-[Youtube] (https://www.youtube.com/watch?v=xjAu2Y2nJ34) - This is where I learnt a lot of how to implement javascript
+[Youtube] (https://www.youtube.com/watch?v=rfscVS0vtbw) - This is where I learnt a lot of how to implement alot of my python functionality.
 
 #### Acknowledgments
 
