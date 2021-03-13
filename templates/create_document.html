@@ -2,7 +2,7 @@
 {% block content %}
 
 <h4 class="center-align title-font">Create New Document</h4>
-
+<!--form for signed in user to create a new document-->
 <div class="row card-panel blue-grey lighten-5">
     <form class="col col s8 offset-s2" method="POST" action="{{ url_for('create_document') }}">
         <div class="row">
@@ -29,6 +29,7 @@
         </div>
         <div class="row">
             <div class="input-field col s8 offset-s2">
+                <!--toggle button-->
                 <div class="switch">
                     <label for="self_isolating">
                         <input type="checkbox" id="self_isolating" name="self_isolating">

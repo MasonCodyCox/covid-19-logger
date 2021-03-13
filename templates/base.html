@@ -19,6 +19,7 @@
 <body>
 
     <header>
+        <!--Navbar medium < screens-->
         <nav class="nav-extended text-shadow purple darken-1">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_documents') }}" class="brand-logo title-font">Covid Tracker</a>
@@ -26,6 +27,7 @@
                         class="material-icons">apps</i></a>
                 <ul class="right hide-on-med-and-down title-font">
                     <li><a href="{{ url_for('get_documents') }}">Home</a></li>
+                    <!--links that are only available to signed in/ out users-->
                     {% if session.user %}
                     <li><a href="{{ url_for('my_profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('create_document') }}">New Document</a></li>
@@ -38,9 +40,10 @@
                 </ul>
             </div>
         </nav>
-
+    <!--navbar for mobile screens-->
         <ul class="sidenav title-font" id="mobile-demo">
             <li><a href="{{ url_for('get_documents') }}">Home</a></li>
+            <!--links that are only available to signed in/ out users-->
             {% if session.user %} 
             <li><a href="{{ url_for('my_profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('create_document') }}">New Document</a></li>
